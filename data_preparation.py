@@ -79,7 +79,7 @@ def load_partition(dataset, validation_split, batch_size):
 
 
     # iscal setting
-    dailyActivity_merged_df = pd.read_csv("/home/ubuntu/isfolder/fl_agent_paper/fedops_iscal/iscal/data/dailyActivity_merged.csv")
+    dailyActivity_merged_df = pd.read_csv("./data/dailyActivity_merged.csv") # client data load
     features = [
     'TotalSteps', 'TotalDistance', 'TrackerDistance', 'VeryActiveDistance',
     'ModeratelyActiveDistance', 'LightActiveDistance', 'VeryActiveMinutes',
@@ -138,7 +138,7 @@ def gl_model_torch_validation(batch_size):
     Setting up a dataset to evaluate a global model on the server
     """
     # iscal setting
-    dailyActivity_merged_df = pd.read_csv("/app/code/dailyActivity_merged.csv")
+    dailyActivity_merged_df = pd.read_csv("/app/code/data/dailyActivity_merged.csv") # server data load
     features = [
     'TotalSteps', 'TotalDistance', 'TrackerDistance', 'VeryActiveDistance',
     'ModeratelyActiveDistance', 'LightActiveDistance', 'VeryActiveMinutes',
